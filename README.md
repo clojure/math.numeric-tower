@@ -1,5 +1,7 @@
 # clojure.math.numeric-tower
 
+Formerly clojure.contrib.math
+
 Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
