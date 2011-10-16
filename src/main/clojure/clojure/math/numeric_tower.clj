@@ -54,13 +54,20 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
 "}
   clojure.math.numeric-tower)
 
+;; so this code works with both 1.2.x and 1.3.0:
+(def ^{:private true} minus (first [-' -]))
+(def ^{:private true} mult (first [*' *]))
+(def ^{:private true} plus (first [+' +]))
+(def ^{:private true} dec* (first [dec' dec]))
+(def ^{:private true} inc* (first [inc' inc]))
+
 (defn- expt-int [base pow]
   (loop [n pow, y (num 1), z base]
     (let [t (even? n), n (quot n 2)]
       (cond
-       t (recur n y (*' z z))
-       (zero? n) (*' z y)
-       :else (recur n (*' z y) (*' z z))))))
+       t (recur n y (mult z z))
+       (zero? n) (mult z y)
+       :else (recur n (mult z y) (mult z z))))))
 
 (defn expt
   "(expt base pow) is base to the pow power.
@@ -70,14 +77,14 @@ Returns an exact number if the base is an exact number and the power is an integ
     (cond
      (pos? pow) (expt-int base pow)
      (zero? pow) 1
-     :else (/ 1 (expt-int base (-' pow))))
+     :else (/ 1 (expt-int base (minus pow))))
     (Math/pow base pow)))
   
 (defn abs "(abs n) is the absolute value of n" [n]
   (cond
    (not (number? n)) (throw (IllegalArgumentException.
 			     "abs requires a number"))
-   (neg? n) (-' n)
+   (neg? n) (minus n)
    :else n))
 
 (defprotocol MathFunctions
@@ -93,6 +100,14 @@ round always returns an integer.  Rounds up for values exactly in between two in
 (declare sqrt-integer)
 (declare sqrt-ratio)
 (declare sqrt-decimal)
+
+;; feature testing macro, based on suggestion from Chas Emerick:
+(defmacro when-available
+  [sym & body]
+  (try
+    (when (resolve sym)
+      (list* 'do body))
+    (catch ClassNotFoundException _#)))
 
 (extend-type
  Integer MathFunctions
@@ -118,13 +133,15 @@ round always returns an integer.  Rounds up for values exactly in between two in
  (integer-length [n] (.bitLength n))
  (sqrt [n] (sqrt-integer n)))
 
-(extend-type
- clojure.lang.BigInt MathFunctions
- (floor [n] n)
- (ceil [n] n)
- (round [n] n)
- (integer-length [n] (.bitLength n))
- (sqrt [n] (sqrt-integer n)))
+(when-available
+  clojure.lang.BigInt
+  (extend-type
+    clojure.lang.BigInt MathFunctions
+    (floor [n] n)
+    (ceil [n] n)
+    (round [n] n)
+    (integer-length [n] (.bitLength n))
+    (sqrt [n] (sqrt-integer n))))
 
 (extend-type
  java.math.BigDecimal MathFunctions
@@ -137,9 +154,9 @@ round always returns an integer.  Rounds up for values exactly in between two in
  clojure.lang.Ratio MathFunctions
  (floor [n]
 	(if (pos? n) (quot (. n numerator) (. n denominator))
-	    (dec' (quot (. n numerator) (. n denominator)))))
+	    (dec* (quot (. n numerator) (. n denominator)))))
  (ceil [n]
-       (if (pos? n) (inc' (quot (. n numerator) (. n denominator)))
+       (if (pos? n) (inc* (quot (. n numerator) (. n denominator)))
 	   (quot (. n numerator) (. n denominator))))
  (round [n] (floor (+ n 1/2)))
  (sqrt [n] (sqrt-ratio n)))
@@ -172,7 +189,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
     (throw (IllegalArgumentException. "lcm requires two integers")))
   (cond (zero? a) 0
         (zero? b) 0
-        :else (abs (*' b (quot a (gcd a b))))))
+        :else (abs (mult b (quot a (gcd a b))))))
 
 ;; Produces the largest integer less than or equal to the square root of n
 ;; Input n must be a non-negative integer
@@ -182,8 +199,8 @@ round always returns an integer.  Rounds up for values exactly in between two in
    (let [n-len (integer-length n)]
      (loop [init-value (if (even? n-len)
 			 (expt 2 (quot n-len 2))
-			 (expt 2 (inc' (quot n-len 2))))]
-       (let [iterated-value (quot (+' init-value (quot n init-value)) 2)]
+			 (expt 2 (inc* (quot n-len 2))))]
+       (let [iterated-value (quot (plus init-value (quot n init-value)) 2)]
 	 (if (>= iterated-value init-value)
 	   init-value
 	   (recur iterated-value)))))
@@ -199,13 +216,13 @@ For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6."
   (if (or (not (integer? n)) (neg? n))
     (throw (IllegalArgumentException. "exact-integer-sqrt requires a non-negative integer"))
     (let [isqrt (integer-sqrt n),
-	  error (-' n (*' isqrt isqrt))]
+	  error (minus n (mult isqrt isqrt))]
       [isqrt error])))
 
 (defn- sqrt-integer [n]
   (if (neg? n) Double/NaN
       (let [isqrt (integer-sqrt n),
-	    error (-' n (*' isqrt isqrt))]
+	    error (minus n (mult isqrt isqrt))]
 	(if (zero? error) isqrt
 	    (Math/sqrt n)))))
 
