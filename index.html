@@ -45,34 +45,50 @@ namespace.
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0">Overview</a>
+    <a href="#toc0" style="margin-top: 3px;">Overview</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#proto-section" style="margin-top: 3px;">Protocols</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/abs">abs</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/ceil">ceil</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/exact-integer-sqrt">exact-integer-sqrt</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/expt">expt</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/floor">floor</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/gcd">gcd</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/integer-length">integer-length</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/lcm">lcm</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/round">round</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.math.numeric-tower/sqrt">sqrt</a>
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/MathFunctions">MathFunctions</a>
+      <div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.math.numeric-tower/ceil">ceil</a>
+      </div><div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.math.numeric-tower/floor">floor</a>
+      </div><div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.math.numeric-tower/integer-length">integer-length</a>
+      </div><div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.math.numeric-tower/round">round</a>
+      </div><div style="margin-left: 1em;" class="toc-subentry">
+        <a class="toc-subentry-anchor" href="#clojure.math.numeric-tower/sqrt">sqrt</a>
+      </div>
     </div>
-    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#" style="margin-top: 3px;"></a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/abs">abs</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/exact-integer-sqrt">exact-integer-sqrt</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/expt">expt</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/gcd">gcd</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.math.numeric-tower/lcm">lcm</a>
+      
+    </div>
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.math.numeric-tower</span>
-  - <span id="header-project">Math functions</span> <span id="header-version">0.0.2</span> (<span id="header-status">in development</span>)
+                <div id="content-tag"><h1 id="overview">API for <span id="clojure.math.numeric-tower">clojure.math.numeric-tower</span>
+  - <span id="header-project">Math functions</span> <span id="header-version">0.0.2</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Mark Engelberg</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.math.numeric-tower</span>
@@ -125,122 +141,138 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
 
 
 <br />
-<h2>Public Variables and Functions</h2>
-<div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/abs">abs</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (abs n)
+
+<div id="proto-section">
+  <p></p>
+  <h2>Protocols</h2>
+  <div id="proto-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/MathFunctions">MathFunctions</h2>
+    <span id="proto-type">Protocol</span><br />
+    <pre id="proto-docstr"></pre>
+    Known implementations: <span id="proto-impls">clojure.lang.BigInt, clojure.lang.Ratio, java.lang.Double, java.lang.Float, java.lang.Integer, java.lang.Long, java.math.BigDecimal, java.math.BigInteger</span>
+    <div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.math.numeric-tower/ceil">ceil</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (ceil n)
 </pre>
-  <pre id="var-docstr">(abs n) is the absolute value of n</pre>
-  
-  
-  <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L83" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/ceil">ceil</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (ceil n)
-</pre>
-  <pre id="var-docstr">(ceil n) returns the least integer greater than or equal to n.
+      <pre id="var-docstr">(ceil n) returns the least integer greater than or equal to n.
 If n is an exact number, ceil returns an integer, otherwise a double.</pre>
-  
-  
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/exact-integer-sqrt">exact-integer-sqrt</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (exact-integer-sqrt n)
+      
+      
+      
+    </div><div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.math.numeric-tower/floor">floor</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (floor n)
 </pre>
-  <pre id="var-docstr">(exact-integer-sqrt n) expects a non-negative integer n, and returns [s r] where n = s^2+r and n &lt; (s+1)^2.  In other words, it returns the floor of the square root and the 'remainder'.
-For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6.</pre>
-  
-  
-  <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L213" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/expt">expt</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (expt base pow)
-</pre>
-  <pre id="var-docstr">(expt base pow) is base to the pow power.
-Returns an exact number if the base is an exact number and the power is an integer, otherwise returns a double.</pre>
-  
-  
-  <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L72" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/floor">floor</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (floor n)
-</pre>
-  <pre id="var-docstr">(floor n) returns the greatest integer less than or equal to n.
+      <pre id="var-docstr">(floor n) returns the greatest integer less than or equal to n.
 If n is an exact number, floor returns an integer, otherwise a double.</pre>
-  
-  
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/gcd">gcd</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (gcd a b)
+      
+      
+      
+    </div><div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.math.numeric-tower/integer-length">integer-length</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (integer-length n)
 </pre>
-  <pre id="var-docstr">(gcd a b) returns the greatest common divisor of a and b</pre>
-  
-  
-  <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L178" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/integer-length">integer-length</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (integer-length n)
+      <pre id="var-docstr">Length of integer in binary</pre>
+      
+      
+      
+    </div><div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.math.numeric-tower/round">round</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (round n)
 </pre>
-  <pre id="var-docstr">Length of integer in binary</pre>
-  
-  
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/lcm">lcm</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (lcm a b)
-</pre>
-  <pre id="var-docstr">(lcm a b) returns the least common multiple of a and b</pre>
-  
-  
-  <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L185" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/round">round</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (round n)
-</pre>
-  <pre id="var-docstr">(round n) rounds to the nearest integer.
+      <pre id="var-docstr">(round n) rounds to the nearest integer.
 round always returns an integer.  Rounds up for values exactly in between two integers.</pre>
-  
-  
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.math.numeric-tower/sqrt">sqrt</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (sqrt n)
+      
+      
+      
+    </div><div id="proto-var-entry">
+      <br />
+      <h3 id="clojure.math.numeric-tower/sqrt">sqrt</h3>
+      <span id="var-type">function</span><br />
+      <pre id="var-usage">Usage: (sqrt n)
 </pre>
-  <pre id="var-docstr">Square root, but returns exact number if possible.</pre>
-  
-  
-  
+      <pre id="var-docstr">Square root, but returns exact number if possible.</pre>
+      
+      
+      
+    </div>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L90" id="proto-source">Source</a>
+  </div>
+</div>
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/abs">abs</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (abs n)
+</pre>
+    <pre id="var-docstr">(abs n) is the absolute value of n</pre>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L83" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/exact-integer-sqrt">exact-integer-sqrt</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (exact-integer-sqrt n)
+</pre>
+    <pre id="var-docstr">(exact-integer-sqrt n) expects a non-negative integer n, and returns [s r] where n = s^2+r and n &lt; (s+1)^2.  In other words, it returns the floor of the square root and the 'remainder'.
+For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6.</pre>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L213" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/expt">expt</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (expt base pow)
+</pre>
+    <pre id="var-docstr">(expt base pow) is base to the pow power.
+Returns an exact number if the base is an exact number and the power is an integer, otherwise returns a double.</pre>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L72" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/gcd">gcd</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (gcd a b)
+</pre>
+    <pre id="var-docstr">(gcd a b) returns the greatest common divisor of a and b</pre>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L178" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.math.numeric-tower/lcm">lcm</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (lcm a b)
+</pre>
+    <pre id="var-docstr">(lcm a b) returns the least common multiple of a and b</pre>
+    
+    
+    <a href="https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L185" id="var-source">Source</a>
+  </div>
 </div>
 
 
@@ -250,7 +282,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2011 by Rich Hickey and the various contributors</div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2012 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

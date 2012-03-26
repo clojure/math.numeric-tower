@@ -21,17 +21,6 @@
    :var-type "function",
    :line 83,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
-  {:file nil,
-   :raw-source-url nil,
-   :source-url nil,
-   :wiki-url
-   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/ceil",
-   :namespace "clojure.math.numeric-tower",
-   :var-type "function",
-   :arglists ([n]),
-   :doc
-   "(ceil n) returns the least integer greater than or equal to n.\nIf n is an exact number, ceil returns an integer, otherwise a double.",
-   :name "ceil"}
   {:arglists ([n]),
    :name "exact-integer-sqrt",
    :namespace "clojure.math.numeric-tower",
@@ -60,17 +49,6 @@
    :var-type "function",
    :line 72,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
-  {:file nil,
-   :raw-source-url nil,
-   :source-url nil,
-   :wiki-url
-   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/floor",
-   :namespace "clojure.math.numeric-tower",
-   :var-type "function",
-   :arglists ([n]),
-   :doc
-   "(floor n) returns the greatest integer less than or equal to n.\nIf n is an exact number, floor returns an integer, otherwise a double.",
-   :name "floor"}
   {:arglists ([a b]),
    :name "gcd",
    :namespace "clojure.math.numeric-tower",
@@ -84,16 +62,6 @@
    :var-type "function",
    :line 178,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
-  {:file nil,
-   :raw-source-url nil,
-   :source-url nil,
-   :wiki-url
-   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/integer-length",
-   :namespace "clojure.math.numeric-tower",
-   :var-type "function",
-   :arglists ([n]),
-   :doc "Length of integer in binary",
-   :name "integer-length"}
   {:arglists ([a b]),
    :name "lcm",
    :namespace "clojure.math.numeric-tower",
@@ -107,6 +75,50 @@
    :var-type "function",
    :line 185,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
+  {:file "src/main/clojure/clojure/math/numeric_tower.clj",
+   :raw-source-url
+   "https://github.com/clojure/math.numeric-tower/raw/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj",
+   :source-url
+   "https://github.com/clojure/math.numeric-tower/blob/6a961d58289d4d2d56cedd80216e2454cda0572e/src/main/clojure/clojure/math/numeric_tower.clj#L90",
+   :wiki-url
+   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/MathFunctions",
+   :namespace "clojure.math.numeric-tower",
+   :line 90,
+   :var-type "protocol",
+   :doc nil,
+   :name "MathFunctions"}
+  {:file nil,
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url
+   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/ceil",
+   :namespace "clojure.math.numeric-tower",
+   :var-type "function",
+   :arglists ([n]),
+   :doc
+   "(ceil n) returns the least integer greater than or equal to n.\nIf n is an exact number, ceil returns an integer, otherwise a double.",
+   :name "ceil"}
+  {:file nil,
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url
+   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/floor",
+   :namespace "clojure.math.numeric-tower",
+   :var-type "function",
+   :arglists ([n]),
+   :doc
+   "(floor n) returns the greatest integer less than or equal to n.\nIf n is an exact number, floor returns an integer, otherwise a double.",
+   :name "floor"}
+  {:file nil,
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url
+   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/integer-length",
+   :namespace "clojure.math.numeric-tower",
+   :var-type "function",
+   :arglists ([n]),
+   :doc "Length of integer in binary",
+   :name "integer-length"}
   {:file nil,
    :raw-source-url nil,
    :source-url nil,
