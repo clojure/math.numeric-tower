@@ -48,7 +48,7 @@
        (lcm 4 10) 20
        (lcm 1 0) 0
        (lcm 0 1) 0
-       (lcm 0 0))
+       (lcm 0 0) 0)
   (is (thrown? IllegalArgumentException (lcm nil 0)))
   (is (thrown? IllegalArgumentException (lcm 0 nil)))
   (is (thrown? IllegalArgumentException (lcm 7.0 0))))
