@@ -6,6 +6,27 @@ Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
 
+## Installation
+
+This library is available in Maven central. Add this `:dependency` to your
+Leinengen `project.clj`:
+
+```clojure
+[org.clojure/math.numeric-tower "0.0.1"]
+```
+
+Or, add this to your Maven project's `pom.xml`:
+
+```xml
+<dependency>
+  <groupId>org.clojure</groupId>
+  <artifactId>math.numeric-tower</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
+The list of all prior releases is available [here](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22).
+
 ## Usage
 
 expt - (expt x y) is x to the yth power, returns an exact number
