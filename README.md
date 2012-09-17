@@ -1,4 +1,5 @@
-# clojure.math.numeric-tower
+clojure.math.numeric-tower
+========================================
 
 Formerly clojure.contrib.math
 
@@ -6,55 +7,86 @@ Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
 
-## Usage
 
-expt - (expt x y) is x to the yth power, returns an exact number
-  if the base is an exact number, and the power is an integer,
-  otherwise returns a double.
+Releases and Dependency Information
+========================================
 
-abs - (abs n) is the absolute value of n
+Latest stable release: 0.0.1
 
-gcd - (gcd m n) returns the greatest common divisor of m and n
+* [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
-lcm - (lcm m n) returns the least common multiple of m and n
+* [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~math.numeric-tower~~~)
 
-When floor, ceil, and round are passed doubles, we just defer to
-the corresponding functions in Java's Math library.  Java's
-behavior is somewhat strange (floor and ceil return doubles rather
-than integers, and round on large doubles yields spurious results)
-but it seems best to match Java's semantics.  On exact numbers
-(ratios and decimals), we can have cleaner semantics.
+[Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-floor - (floor n) returns the greatest integer less than or equal to n.
-  If n is an exact number, floor returns an integer,
-  otherwise a double.
+```clojure
+[org.clojure/math.numeric-tower "0.0.1"]
+```
 
-ceil - (ceil n) returns the least integer greater than or equal to n.
-  If n is an exact number, ceil returns an integer,
-  otherwise a double.
+[Maven](http://maven.apache.org/) dependency information:
 
-round - (round n) rounds to the nearest integer.
-  round always returns an integer.  round rounds up for values
-  exactly in between two integers.
+```xml
+<dependency>
+  <groupId>org.clojure</groupId>
+  <artifactId>math.numeric-tower</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
+Example Usage
+========================================
+
+```clojure
+(ns example.core
+  (:require [clojure.math.numeric-tower :as math]))
+
+(defn- sqr
+  "Uses the numeric tower expt to square a number"
+  [x]
+  (math/expt x 2))
+
+(defn euclidean-squared-distance
+  "Computes the Euclidean squared distance between two sequences"
+  [a b]
+  (reduce + (map (comp sqr -) a b)))
+
+(defn euclidean-distance
+  "Computes the Euclidean distance between two sequences"
+  [a b]
+  (math/sqrt (euclidean-squared-distance a b)))
+
+(let [a [1 2 3 5 8 13 21]
+      b [0 2 4 6 8 10 12]
+  (euclidean-distance a b))
+
+;;=> 9.643650760992955
+```
+
+Refer to docstrings in the `clojure.math.numeric-tower` namespace for
+additional documentation.
+
+[API Documentation](http://clojure.github.com/math.numeric-tower/)
+
+Developer Information
+========================================
+
+* [GitHub project](https://github.com/clojure/math.numeric-tower)
+
+* [Bug Tracker](http://dev.clojure.org/jira/browse/MTOWER)
+
+* [Continuous Integration](http://build.clojure.org/job/math.numeric-tower/)
+
+* [Compatibility Test Matrix](http://build.clojure.org/job/math.numeric-tower-test-matrix/)
 
 
-sqrt - Implements the sqrt behavior I'm accustomed to from PLT Scheme,
-  specifically, if the input is an exact number, and is a square
-  of an exact number, the output will be exact.  The downside
-  is that for the common case (inexact square root), some extra
-  computation is done to look for an exact square root first.
-  So if you need blazingly fast square root performance, and you
-  know you're just going to need a double result, you're better
-  off calling java's Math/sqrt, or alternatively, you could just
-  convert your input to a double before calling this sqrt function.
-  If Clojure ever gets complex numbers, then this function will
-  need to be updated (so negative inputs yield complex outputs).
+Changelog
+========================================
 
-exact-integer-sqrt - Implements a math function from the R6RS Scheme
-  standard.  (exact-integer-sqrt k) where k is a non-negative integer,
-  returns [s r] where k = s^2+r and k < (s+1)^2.  In other words, it
-  returns the floor of the square root and the "remainder".
+* Release 0.0.1 on 2011-10-15
+  * Initial release.
+  * Source-compatible with clojure.contrib.math, except for the name change.
 
-## License
+License
+========================================
 
 Distributed under the Eclipse Public License, the same as Clojure.
