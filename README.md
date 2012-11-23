@@ -7,11 +7,30 @@ Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
 
+Functions included:
+
+* (expt x y) - x to the yth power
+
+* (abs n) - absolute value of n
+
+* (gcd m n) - greatest common divisor of m and n
+
+* (floor x) - round down
+
+* (ceil x) - round up
+
+* (round x) - round to nearest
+
+* (sqrt x) - square root, exact if possible
+
+* (exact-integer-sqrt k) returns floor of square root and the "remainder"
+
+More documentation in docstrings.
 
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.0.1
+Latest stable release: 0.0.2
 
 * [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
@@ -20,7 +39,7 @@ Latest stable release: 0.0.1
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.0.1"]
+[org.clojure/math.numeric-tower "0.0.2"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information:
@@ -29,7 +48,7 @@ Latest stable release: 0.0.1
 <dependency>
   <groupId>org.clojure</groupId>
   <artifactId>math.numeric-tower</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
@@ -81,6 +100,8 @@ Developer Information
 
 Changelog
 ========================================
+* Release 0.0.2 on 2012-11-23
+  * Added type hints to remove some reflective calls.
 
 * Release 0.0.1 on 2011-10-15
   * Initial release.

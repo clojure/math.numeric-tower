@@ -226,7 +226,7 @@ For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6."
 	(if (zero? error) isqrt
 	    (Math/sqrt n)))))
 
-(defn- sqrt-ratio [n]
+(defn- sqrt-ratio [^clojure.lang.Ratio n]
   (if (neg? n) Double/NaN
       (let [numerator (.numerator n),
 	    denominator (.denominator n),
@@ -243,6 +243,6 @@ For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6."
       (let [frac (rationalize n),
 	    sqrtfrac (sqrt frac)]
 	(if (ratio? sqrtfrac)
-	  (/ (BigDecimal. (.numerator sqrtfrac))
-	     (BigDecimal. (.denominator sqrtfrac)))
+	  (/ (BigDecimal. (.numerator ^clojure.lang.Ratio sqrtfrac))
+	     (BigDecimal. (.denominator ^clojure.lang.Ratio sqrtfrac)))
 	  sqrtfrac))))
