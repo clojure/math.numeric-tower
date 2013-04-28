@@ -75,7 +75,7 @@ Example Usage
   (math/sqrt (euclidean-squared-distance a b)))
 
 (let [a [1 2 3 5 8 13 21]
-      b [0 2 4 6 8 10 12]
+      b [0 2 4 6 8 10 12]]
   (euclidean-distance a b))
 
 ;;=> 9.643650760992955
