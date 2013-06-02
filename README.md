@@ -15,6 +15,8 @@ Functions included:
 
 * (gcd m n) - greatest common divisor of m and n
 
+* (lcm m n) - least common multiple of m and n
+
 * (floor x) - round down
 
 * (ceil x) - round up
