@@ -234,7 +234,7 @@ For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6."
 	(if (float? sqrtnum)
 	  (Math/sqrt n)
 	  (let [sqrtden (sqrt denominator)]
-	    (if (float? sqrtnum)
+	    (if (float? sqrtden)
 	      (Math/sqrt n)
 	      (/ sqrtnum sqrtden)))))))
 
