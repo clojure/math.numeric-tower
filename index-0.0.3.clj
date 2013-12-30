@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower/clojure.math.numeric-tower-api.html",
    :name "clojure.math.numeric-tower",
@@ -12,9 +12,9 @@
    :name "abs",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L83",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L83",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/abs",
    :doc "(abs n) is the absolute value of n",
@@ -25,9 +25,9 @@
    :name "exact-integer-sqrt",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L213",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L213",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/exact-integer-sqrt",
    :doc
@@ -39,9 +39,9 @@
    :name "expt",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L72",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L72",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/expt",
    :doc
@@ -53,9 +53,9 @@
    :name "gcd",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L178",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L178",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/gcd",
    :doc "(gcd a b) returns the greatest common divisor of a and b",
@@ -66,9 +66,9 @@
    :name "lcm",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L185",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L185",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/lcm",
    :doc "(lcm a b) returns the least common multiple of a and b",
@@ -77,9 +77,9 @@
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:file "src/main/clojure/clojure/math/numeric_tower.clj",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/1e2412dc1184354eb7936cb73cd688571912ed95/src/main/clojure/clojure/math/numeric_tower.clj#L90",
+   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L90",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/MathFunctions",
    :namespace "clojure.math.numeric-tower",
