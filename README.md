@@ -32,7 +32,7 @@ More documentation in docstrings.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.0.2
+Latest stable release: 0.0.3
 
 * [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
@@ -41,7 +41,7 @@ Latest stable release: 0.0.2
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.0.2"]
+[org.clojure/math.numeric-tower "0.0.3"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information:
@@ -102,6 +102,9 @@ Developer Information
 
 Changelog
 ========================================
+* Release 0.0.3 on 2013-12-29
+  * Minor improvement to sqrt of ratio.
+  
 * Release 0.0.2 on 2012-11-23
   * Added type hints to remove some reflective calls.
 
