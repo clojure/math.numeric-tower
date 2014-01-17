@@ -12,6 +12,7 @@
       (expt 5 4.2) (Math/pow 5 4.2)
       (expt 5.3 4) (Math/pow 5.3 4)
       (expt 2 0) 1
+      (expt 4N 0) 1N
       (expt 4M 0) 1M
       (expt 8M 1) 8M
       (expt 16M 16) 18446744073709551616M))
