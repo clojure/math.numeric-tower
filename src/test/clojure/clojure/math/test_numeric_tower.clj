@@ -13,12 +13,15 @@
       (expt 5.3 4) (Math/pow 5.3 4)
       (expt 5.3 4) (Math/pow 5.3 4)
       (expt 2 0) 1
-      (when-available clojure.lang.BigInt (expt 4N 0))
-      (when-available clojure.lang.BigInt 1N)
       (expt (java.math.BigInteger. "4") 0) (java.math.BigInteger. "1")
       (expt 4M 0) 1M
       (expt 8M 1) 8M
       (expt 16M 16) 18446744073709551616M))
+
+(when-available clojure.lang.BigInt
+  (deftest test-expt-bigint
+    (are [x y] (= x y)
+      (expt 4N 0) 1N)))
 
 (deftest test-abs
   (are [x y] (= x y)
