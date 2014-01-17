@@ -71,12 +71,16 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
 
 (defn expt
   "(expt base pow) is base to the pow power.
-Returns an exact number if the base is an exact number and the power is an integer, otherwise returns a double."
+  Returns an exact number if the base is an exact number and the
+  power is an integer, otherwise returns a double."
   [base pow]
   (if (and (not (float? base)) (integer? pow))
     (cond
      (pos? pow) (expt-int base pow)
-     (zero? pow) 1
+     (zero? pow) (cond
+                   (= (type base) BigDecimal) 1M
+                   (= (type base) clojure.lang.BigInt) 1N
+                   :else 1)
      :else (/ 1 (expt-int base (minus pow))))
     (Math/pow base pow)))
 
