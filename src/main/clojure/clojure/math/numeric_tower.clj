@@ -5,7 +5,7 @@
 ;; by Mark Engelberg (mark.engelberg@gmail.com)
 ;; May 21, 2011
 
-(ns 
+(ns
   ^{:author "Mark Engelberg",
      :doc "Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
@@ -79,7 +79,7 @@ Returns an exact number if the base is an exact number and the power is an integ
      (zero? pow) 1
      :else (/ 1 (expt-int base (minus pow))))
     (Math/pow base pow)))
-  
+
 (defn abs "(abs n) is the absolute value of n" [n]
   (cond
    (not (number? n)) (throw (IllegalArgumentException.
@@ -177,7 +177,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
 
 (defn gcd "(gcd a b) returns the greatest common divisor of a and b" [a b]
   (if (or (not (integer? a)) (not (integer? b)))
-    (throw (IllegalArgumentException. "gcd requires two integers"))  
+    (throw (IllegalArgumentException. "gcd requires two integers"))
     (loop [a (abs a) b (abs b)]
       (if (zero? b) a,
 	  (recur b (mod a b))))))
