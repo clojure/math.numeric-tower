@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower/clojure.math.numeric-tower-api.html",
    :name "clojure.math.numeric-tower",
@@ -12,78 +12,78 @@
    :name "abs",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L83",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L96",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/abs",
    :doc "(abs n) is the absolute value of n",
    :var-type "function",
-   :line 83,
+   :line 96,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:arglists ([n]),
    :name "exact-integer-sqrt",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L213",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L218",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/exact-integer-sqrt",
    :doc
    "(exact-integer-sqrt n) expects a non-negative integer n, and returns [s r] where n = s^2+r and n < (s+1)^2.  In other words, it returns the floor of the square root and the 'remainder'.\nFor example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6.",
    :var-type "function",
-   :line 213,
+   :line 218,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:arglists ([base pow]),
    :name "expt",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L72",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L80",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/expt",
    :doc
    "(expt base pow) is base to the pow power.\nReturns an exact number if the base is an exact number and the power is an integer, otherwise returns a double.",
    :var-type "function",
-   :line 72,
+   :line 80,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:arglists ([a b]),
    :name "gcd",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L178",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L183",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/gcd",
    :doc "(gcd a b) returns the greatest common divisor of a and b",
    :var-type "function",
-   :line 178,
+   :line 183,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:arglists ([a b]),
    :name "lcm",
    :namespace "clojure.math.numeric-tower",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L185",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L190",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/lcm",
    :doc "(lcm a b) returns the least common multiple of a and b",
    :var-type "function",
-   :line 185,
+   :line 190,
    :file "src/main/clojure/clojure/math/numeric_tower.clj"}
   {:file "src/main/clojure/clojure/math/numeric_tower.clj",
    :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj",
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
    :source-url
-   "https://github.com/clojure/math.numeric-tower/blob/d40bd9e87e4568588c839cc1fd141be35081b4f7/src/main/clojure/clojure/math/numeric_tower.clj#L90",
+   "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L103",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/MathFunctions",
    :namespace "clojure.math.numeric-tower",
-   :line 90,
+   :line 103,
    :var-type "protocol",
    :doc nil,
    :name "MathFunctions"}
