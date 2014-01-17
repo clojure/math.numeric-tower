@@ -21,7 +21,7 @@
 (when-available clojure.lang.BigInt
   (deftest test-expt-bigint
     (are [x y] (= x y)
-      (expt 4N 0) 1N)))
+      (expt (bigint 4) 0) (bigint 1))))
 
 (deftest test-abs
   (are [x y] (= x y)
