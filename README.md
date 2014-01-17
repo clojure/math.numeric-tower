@@ -32,7 +32,7 @@ More documentation in docstrings.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.0.3
+Latest stable release: 0.0.4
 
 * [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
@@ -41,7 +41,7 @@ Latest stable release: 0.0.3
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.0.3"]
+[org.clojure/math.numeric-tower "0.0.4"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information:
@@ -50,7 +50,7 @@ Latest stable release: 0.0.3
 <dependency>
   <groupId>org.clojure</groupId>
   <artifactId>math.numeric-tower</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.4</version>
 </dependency>
 ```
 
@@ -102,9 +102,14 @@ Developer Information
 
 Changelog
 ========================================
+* Release 0.0.4 on 2014-01-16
+  * Adjust return type of expt to match base when power is 0.
+	  * (expt 3M 0) -> 1M
+	  * (expt 3N 0) -> 1N
+
 * Release 0.0.3 on 2013-12-29
   * Minor improvement to sqrt of ratio.
-  
+
 * Release 0.0.2 on 2012-11-23
   * Added type hints to remove some reflective calls.
 

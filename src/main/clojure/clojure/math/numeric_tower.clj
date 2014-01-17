@@ -61,6 +61,14 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
 (def ^{:private true} dec* (first [dec' dec]))
 (def ^{:private true} inc* (first [inc' inc]))
 
+;; feature testing macro, based on suggestion from Chas Emerick:
+(defmacro when-available
+  [sym & body]
+  (try
+    (when (resolve sym)
+      (list* 'do body))
+    (catch ClassNotFoundException _#)))
+
 (defn- expt-int [base pow]
   (loop [n pow, y (num 1), z base]
     (let [t (even? n), n (quot n 2)]
@@ -76,7 +84,12 @@ Returns an exact number if the base is an exact number and the power is an integ
   (if (and (not (float? base)) (integer? pow))
     (cond
      (pos? pow) (expt-int base pow)
-     (zero? pow) 1
+     (zero? pow) (cond
+                   (= (type base) BigDecimal) 1M
+                   (= (type base) java.math.BigInteger) (java.math.BigInteger. "1")
+                   (when-available clojure.lang.BigInt (= (type base) clojure.lang.BigInt))
+                   (when-available clojure.lang.BigInt (bigint 1))
+                   :else 1)
      :else (/ 1 (expt-int base (minus pow))))
     (Math/pow base pow)))
   
@@ -100,14 +113,6 @@ round always returns an integer.  Rounds up for values exactly in between two in
 (declare sqrt-integer)
 (declare sqrt-ratio)
 (declare sqrt-decimal)
-
-;; feature testing macro, based on suggestion from Chas Emerick:
-(defmacro when-available
-  [sym & body]
-  (try
-    (when (resolve sym)
-      (list* 'do body))
-    (catch ClassNotFoundException _#)))
 
 (extend-type
  Integer MathFunctions
