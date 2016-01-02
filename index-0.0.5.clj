@@ -75,24 +75,25 @@
    :namespace "clojure.math.numeric-tower",
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/lcm"}
-  {:name "MathFunctions",
-   :doc nil,
-   :var-type "protocol",
-   :line 103,
-   :namespace "clojure.math.numeric-tower",
-   :wiki-url
-   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/MathFunctions",
+  {:raw-source-url
+   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
+   :name "MathFunctions",
+   :file "src/main/clojure/clojure/math/numeric_tower.clj",
    :source-url
    "https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L103",
-   :raw-source-url
-   "https://github.com/clojure/math.numeric-tower/raw/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj",
-   :file "src/main/clojure/clojure/math/numeric_tower.clj"}
+   :line 103,
+   :var-type "protocol",
+   :arglists nil,
+   :doc nil,
+   :namespace "clojure.math.numeric-tower",
+   :wiki-url
+   "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/MathFunctions"}
   {:name "ceil",
    :doc
    "(ceil n) returns the least integer greater than or equal to n.\nIf n is an exact number, ceil returns an integer, otherwise a double.",
-   :arglists ([n]),
    :var-type "function",
    :namespace "clojure.math.numeric-tower",
+   :arglists ([n]),
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/ceil",
    :source-url nil,
@@ -101,9 +102,9 @@
   {:name "floor",
    :doc
    "(floor n) returns the greatest integer less than or equal to n.\nIf n is an exact number, floor returns an integer, otherwise a double.",
-   :arglists ([n]),
    :var-type "function",
    :namespace "clojure.math.numeric-tower",
+   :arglists ([n]),
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/floor",
    :source-url nil,
@@ -111,9 +112,9 @@
    :file nil}
   {:name "integer-length",
    :doc "Length of integer in binary",
-   :arglists ([n]),
    :var-type "function",
    :namespace "clojure.math.numeric-tower",
+   :arglists ([n]),
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/integer-length",
    :source-url nil,
@@ -122,9 +123,9 @@
   {:name "round",
    :doc
    "(round n) rounds to the nearest integer.\nround always returns an integer.  Rounds up for values exactly in between two integers.",
-   :arglists ([n]),
    :var-type "function",
    :namespace "clojure.math.numeric-tower",
+   :arglists ([n]),
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/round",
    :source-url nil,
@@ -132,9 +133,9 @@
    :file nil}
   {:name "sqrt",
    :doc "Square root, but returns exact number if possible.",
-   :arglists ([n]),
    :var-type "function",
    :namespace "clojure.math.numeric-tower",
+   :arglists ([n]),
    :wiki-url
    "http://clojure.github.com/math.numeric-tower//clojure.math.numeric-tower-api.html#clojure.math.numeric-tower/sqrt",
    :source-url nil,
