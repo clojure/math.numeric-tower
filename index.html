@@ -82,6 +82,9 @@ namespace.
       <a href="#clojure.math.numeric-tower/lcm" class="toc-entry-anchor">lcm</a>
       
     </div>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#"></a>
+    
   </div>
 </div>
 </div>
@@ -159,6 +162,7 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
 </pre>
       <pre id="var-docstr">(ceil n) returns the least integer greater than or equal to n.
 If n is an exact number, ceil returns an integer, otherwise a double.</pre>
+      <pre id="var-specs"></pre>
       
       
       
@@ -170,6 +174,7 @@ If n is an exact number, ceil returns an integer, otherwise a double.</pre>
 </pre>
       <pre id="var-docstr">(floor n) returns the greatest integer less than or equal to n.
 If n is an exact number, floor returns an integer, otherwise a double.</pre>
+      <pre id="var-specs"></pre>
       
       
       
@@ -180,6 +185,7 @@ If n is an exact number, floor returns an integer, otherwise a double.</pre>
       <pre id="var-usage">Usage: (integer-length n)
 </pre>
       <pre id="var-docstr">Length of integer in binary</pre>
+      <pre id="var-specs"></pre>
       
       
       
@@ -191,6 +197,7 @@ If n is an exact number, floor returns an integer, otherwise a double.</pre>
 </pre>
       <pre id="var-docstr">(round n) rounds to the nearest integer.
 round always returns an integer.  Rounds up for values exactly in between two integers.</pre>
+      <pre id="var-specs"></pre>
       
       
       
@@ -201,6 +208,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
       <pre id="var-usage">Usage: (sqrt n)
 </pre>
       <pre id="var-docstr">Square root, but returns exact number if possible.</pre>
+      <pre id="var-specs"></pre>
       
       
       
@@ -222,6 +230,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
     <pre id="var-usage">Usage: (abs n)
 </pre>
     <pre id="var-docstr">(abs n) is the absolute value of n</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L96">Source</a>
@@ -234,6 +243,7 @@ round always returns an integer.  Rounds up for values exactly in between two in
 </pre>
     <pre id="var-docstr">(exact-integer-sqrt n) expects a non-negative integer n, and returns [s r] where n = s^2+r and n &lt; (s+1)^2.  In other words, it returns the floor of the square root and the 'remainder'.
 For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L218">Source</a>
@@ -246,6 +256,7 @@ For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6.</pre>
 </pre>
     <pre id="var-docstr">(expt base pow) is base to the pow power.
 Returns an exact number if the base is an exact number and the power is an integer, otherwise returns a double.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L80">Source</a>
@@ -257,6 +268,7 @@ Returns an exact number if the base is an exact number and the power is an integ
     <pre id="var-usage">Usage: (gcd a b)
 </pre>
     <pre id="var-docstr">(gcd a b) returns the greatest common divisor of a and b</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L183">Source</a>
@@ -268,6 +280,7 @@ Returns an exact number if the base is an exact number and the power is an integ
     <pre id="var-usage">Usage: (lcm a b)
 </pre>
     <pre id="var-docstr">(lcm a b) returns the least common multiple of a and b</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/math.numeric-tower/blob/46a91e50a1b8992300106f925d7474b9366e77f5/src/main/clojure/clojure/math/numeric_tower.clj#L190">Source</a>
