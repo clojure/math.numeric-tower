@@ -5,9 +5,9 @@
 ;; by Mark Engelberg (mark.engelberg@gmail.com)
 ;; May 21, 2011
 
-(ns 
-  ^{:author "Mark Engelberg",
-     :doc "Math functions that deal intelligently with the various
+(ns
+ ^{:author "Mark Engelberg"
+   :doc "Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
 
@@ -52,7 +52,7 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
   returns [s r] where k = s^2+r and k < (s+1)^2.  In other words, it
   returns the floor of the square root and the \"remainder\".
 "}
-  clojure.math.numeric-tower)
+ clojure.math.numeric-tower)
 
 ;; so this code works with both 1.2.x and 1.3.0:
 (def ^{:private true} minus (first [-' -]))
@@ -73,9 +73,9 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
   (loop [n pow, y (num 1), z base]
     (let [t (even? n), n (quot n 2)]
       (cond
-       t (recur n y (mult z z))
-       (zero? n) (mult z y)
-       :else (recur n (mult z y) (mult z z))))))
+        t (recur n y (mult z z))
+        (zero? n) (mult z y)
+        :else (recur n (mult z y) (mult z z))))))
 
 (defn expt
   "(expt base pow) is base to the pow power.
@@ -83,22 +83,22 @@ Returns an exact number if the base is an exact number and the power is an integ
   [base pow]
   (if (and (not (float? base)) (integer? pow))
     (cond
-     (pos? pow) (expt-int base pow)
-     (zero? pow) (cond
-                   (= (type base) BigDecimal) 1M
-                   (= (type base) java.math.BigInteger) (java.math.BigInteger. "1")
-                   (when-available clojure.lang.BigInt (= (type base) clojure.lang.BigInt))
-                   (when-available clojure.lang.BigInt (bigint 1))
-                   :else 1)
-     :else (/ 1 (expt-int base (minus pow))))
+      (pos? pow) (expt-int base pow)
+      (zero? pow) (cond
+                    (= (type base) BigDecimal) 1M
+                    (= (type base) java.math.BigInteger) (java.math.BigInteger. "1")
+                    (when-available clojure.lang.BigInt (= (type base) clojure.lang.BigInt))
+                    (when-available clojure.lang.BigInt (bigint 1))
+                    :else 1)
+      :else (/ 1 (expt-int base (minus pow))))
     (Math/pow base pow)))
-  
+
 (defn abs "(abs n) is the absolute value of n" [n]
   (cond
-   (not (number? n)) (throw (IllegalArgumentException.
-			     "abs requires a number"))
-   (neg? n) (minus n)
-   :else n))
+    (not (number? n)) (throw (IllegalArgumentException.
+                              "abs requires a number"))
+    (neg? n) (minus n)
+    :else n))
 
 (defprotocol MathFunctions
   (floor [n] "(floor n) returns the greatest integer less than or equal to n.
@@ -139,14 +139,14 @@ round always returns an integer.  Rounds up for values exactly in between two in
  (sqrt [n] (sqrt-integer n)))
 
 (when-available
-  clojure.lang.BigInt
-  (extend-type
-    clojure.lang.BigInt MathFunctions
-    (floor [n] n)
-    (ceil [n] n)
-    (round [n] n)
-    (integer-length [n] (.bitLength n))
-    (sqrt [n] (sqrt-integer n))))
+ clojure.lang.BigInt
+ (extend-type
+  clojure.lang.BigInt MathFunctions
+  (floor [n] n)
+  (ceil [n] n)
+  (round [n] n)
+  (integer-length [n] (.bitLength n))
+  (sqrt [n] (sqrt-integer n))))
 
 (extend-type
  java.math.BigDecimal MathFunctions
@@ -158,11 +158,11 @@ round always returns an integer.  Rounds up for values exactly in between two in
 (extend-type
  clojure.lang.Ratio MathFunctions
  (floor [n]
-	(if (pos? n) (quot (. n numerator) (. n denominator))
-	    (dec* (quot (. n numerator) (. n denominator)))))
+   (if (pos? n) (quot (.numerator n) (.denominator n))
+       (dec* (quot (.numerator n) (.denominator n)))))
  (ceil [n]
-       (if (pos? n) (inc* (quot (. n numerator) (. n denominator)))
-	   (quot (. n numerator) (. n denominator))))
+   (if (pos? n) (inc* (quot (.numerator n) (.denominator n)))
+       (quot (.numerator n) (.denominator n))))
  (round [n] (floor (+ n 1/2)))
  (sqrt [n] (sqrt-ratio n)))
 
@@ -182,10 +182,10 @@ round always returns an integer.  Rounds up for values exactly in between two in
 
 (defn gcd "(gcd a b) returns the greatest common divisor of a and b" [a b]
   (if (or (not (integer? a)) (not (integer? b)))
-    (throw (IllegalArgumentException. "gcd requires two integers"))  
+    (throw (IllegalArgumentException. "gcd requires two integers"))
     (loop [a (abs a) b (abs b)]
-      (if (zero? b) a,
-	  (recur b (mod a b))))))
+      (if (zero? b) a
+          (recur b (mod a b))))))
 
 (defn lcm
   "(lcm a b) returns the least common multiple of a and b"
@@ -200,54 +200,54 @@ round always returns an integer.  Rounds up for values exactly in between two in
 ;; Input n must be a non-negative integer
 (defn- integer-sqrt [n]
   (cond
-   (> n 24)
-   (let [n-len (integer-length n)]
-     (loop [init-value (if (even? n-len)
-			 (expt 2 (quot n-len 2))
-			 (expt 2 (inc* (quot n-len 2))))]
-       (let [iterated-value (quot (plus init-value (quot n init-value)) 2)]
-	 (if (>= iterated-value init-value)
-	   init-value
-	   (recur iterated-value)))))
-   (> n 15) 4
-   (> n  8) 3
-   (> n  3) 2
-   (> n  0) 1
-   (> n -1) 0))
+    (> n 24)
+    (let [n-len (integer-length n)]
+      (loop [init-value (if (even? n-len)
+                          (expt 2 (quot n-len 2))
+                          (expt 2 (inc* (quot n-len 2))))]
+        (let [iterated-value (quot (plus init-value (quot n init-value)) 2)]
+          (if (>= iterated-value init-value)
+            init-value
+            (recur iterated-value)))))
+    (> n 15) 4
+    (> n  8) 3
+    (> n  3) 2
+    (pos? n) 1
+    (> n -1) 0))
 
 (defn exact-integer-sqrt "(exact-integer-sqrt n) expects a non-negative integer n, and returns [s r] where n = s^2+r and n < (s+1)^2.  In other words, it returns the floor of the square root and the 'remainder'.
 For example, (exact-integer-sqrt 15) is [3 6] because 15 = 3^2+6."
   [n]
   (if (or (not (integer? n)) (neg? n))
     (throw (IllegalArgumentException. "exact-integer-sqrt requires a non-negative integer"))
-    (let [isqrt (integer-sqrt n),
-	  error (minus n (mult isqrt isqrt))]
+    (let [isqrt (integer-sqrt n)
+          error (minus n (mult isqrt isqrt))]
       [isqrt error])))
 
 (defn- sqrt-integer [n]
   (if (neg? n) Double/NaN
-      (let [isqrt (integer-sqrt n),
-	    error (minus n (mult isqrt isqrt))]
-	(if (zero? error) isqrt
-	    (Math/sqrt n)))))
+      (let [isqrt (integer-sqrt n)
+            error (minus n (mult isqrt isqrt))]
+        (if (zero? error) isqrt
+            (Math/sqrt n)))))
 
 (defn- sqrt-ratio [^clojure.lang.Ratio n]
   (if (neg? n) Double/NaN
-      (let [numerator (.numerator n),
-	    denominator (.denominator n),
-	    sqrtnum (sqrt numerator)]
-	(if (float? sqrtnum)
-	  (Math/sqrt n)
-	  (let [sqrtden (sqrt denominator)]
-	    (if (float? sqrtden)
-	      (Math/sqrt n)
-	      (/ sqrtnum sqrtden)))))))
+      (let [numerator (.numerator n)
+            denominator (.denominator n)
+            sqrtnum (sqrt numerator)]
+        (if (float? sqrtnum)
+          (Math/sqrt n)
+          (let [sqrtden (sqrt denominator)]
+            (if (float? sqrtden)
+              (Math/sqrt n)
+              (/ sqrtnum sqrtden)))))))
 
 (defn- sqrt-decimal [n]
   (if (neg? n) Double/NaN
-      (let [frac (rationalize n),
-	    sqrtfrac (sqrt frac)]
-	(if (ratio? sqrtfrac)
-	  (/ (BigDecimal. (.numerator ^clojure.lang.Ratio sqrtfrac))
-	     (BigDecimal. (.denominator ^clojure.lang.Ratio sqrtfrac)))
-	  sqrtfrac))))
+      (let [frac (rationalize n)
+            sqrtfrac (sqrt frac)]
+        (if (ratio? sqrtfrac)
+          (/ (BigDecimal. (.numerator ^clojure.lang.Ratio sqrtfrac))
+             (BigDecimal. (.denominator ^clojure.lang.Ratio sqrtfrac)))
+          sqrtfrac))))
