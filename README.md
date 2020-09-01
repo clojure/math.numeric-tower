@@ -38,6 +38,11 @@ Latest stable release: 0.0.4
 
 * [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~math.numeric-tower~~~)
 
+[CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
+```clojure
+org.clojure/math.numeric-tower {:mvn/version "0.0.4"}
+```
+
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
