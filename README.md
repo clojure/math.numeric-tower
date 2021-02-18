@@ -34,7 +34,7 @@ Releases and Dependency Information
 
 Latest stable release: 0.0.4
 
-* [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
+* [All Released Versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
 * [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~math.numeric-tower~~~)
 
@@ -49,7 +49,7 @@ org.clojure/math.numeric-tower {:mvn/version "0.0.4"}
 [org.clojure/math.numeric-tower "0.0.4"]
 ```
 
-[Maven](http://maven.apache.org/) dependency information:
+[Maven](https://maven.apache.org/) dependency information:
 
 ```xml
 <dependency>
@@ -91,18 +91,15 @@ Example Usage
 Refer to docstrings in the `clojure.math.numeric-tower` namespace for
 additional documentation.
 
-[API Documentation](http://clojure.github.com/math.numeric-tower/)
+[API Documentation](https://clojure.github.io/math.numeric-tower/)
 
 Developer Information
 ========================================
 
 * [GitHub project](https://github.com/clojure/math.numeric-tower)
-
-* [Bug Tracker](http://dev.clojure.org/jira/browse/MTOWER)
-
-* [Continuous Integration](http://build.clojure.org/job/math.numeric-tower/)
-
-* [Compatibility Test Matrix](http://build.clojure.org/job/math.numeric-tower-test-matrix/)
+* [Bug Tracker](https://clojure.atlassian.net/browse/MTOWER)
+* [Continuous Integration](https://build.clojure.org/job/math.numeric-tower/)
+* [Compatibility Test Matrix](https://build.clojure.org/job/math.numeric-tower-test-matrix/)
 
 
 Changelog
