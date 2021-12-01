@@ -60,7 +60,8 @@ exact-integer-sqrt - Implements a math function from the R6RS Scheme
   returns [s r] where k = s^2+r and k < (s+1)^2.  In other words, it
   returns the floor of the square root and the \"remainder\".
 "}
-  clojure.math.numeric-tower)
+  clojure.math.numeric-tower
+  (:refer-clojure :exclude [abs]))
 
 ;; so this code works with both 1.2.x and 1.3.0:
 (def ^{:private true} minus (first [-' -]))
