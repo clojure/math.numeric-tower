@@ -32,7 +32,7 @@ More documentation in docstrings.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.0.4
+Latest stable release: 0.0.5
 
 * [All Released Versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 
@@ -40,13 +40,13 @@ Latest stable release: 0.0.4
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
 ```clojure
-org.clojure/math.numeric-tower {:mvn/version "0.0.4"}
+org.clojure/math.numeric-tower {:mvn/version "0.0.5"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.0.4"]
+[org.clojure/math.numeric-tower "0.0.5"]
 ```
 
 [Maven](https://maven.apache.org/) dependency information:
@@ -55,7 +55,7 @@ org.clojure/math.numeric-tower {:mvn/version "0.0.4"}
 <dependency>
   <groupId>org.clojure</groupId>
   <artifactId>math.numeric-tower</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
 </dependency>
 ```
 
@@ -104,6 +104,10 @@ Developer Information
 
 Changelog
 ========================================
+
+* Release 0.0.5 on 2021-12-01
+  * Exclude abs to avoid future warning in 1.11
+
 * Release 0.0.4 on 2014-01-16
   * Adjust return type of expt to match base when power is 0.
 	  * (expt 3M 0) -> 1M
