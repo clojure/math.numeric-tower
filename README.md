@@ -98,8 +98,7 @@ Developer Information
 
 * [GitHub project](https://github.com/clojure/math.numeric-tower)
 * [Bug Tracker](https://clojure.atlassian.net/browse/MTOWER)
-* [Continuous Integration](https://build.clojure.org/job/math.numeric-tower/)
-* [Compatibility Test Matrix](https://build.clojure.org/job/math.numeric-tower-test-matrix/)
+* [Continuous Integration](https://github.com/clojure/math.numeric-tower/actions/workflows/test.yml)
 
 
 Changelog
