@@ -9,3 +9,5 @@ clojure-contrib.jar
 clojure.jar
 clojure-contrib-src.jar
 target
+deps.edn
+.cpcache/

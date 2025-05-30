@@ -1,8 +1,6 @@
 clojure.math.numeric-tower
 ========================================
 
-Formerly clojure.contrib.math
-
 Math functions that deal intelligently with the various
 types in Clojure's numeric tower, as well as math functions
 commonly found in Scheme implementations.
@@ -32,21 +30,20 @@ More documentation in docstrings.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.0.5
+Latest stable release: 0.1.0
 
 * [All Released Versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
-
 * [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~math.numeric-tower~~~)
 
-[CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
+[CLI/`deps.edn`](https://clojure.org/reference/deps_edn) dependency information:
 ```clojure
-org.clojure/math.numeric-tower {:mvn/version "0.0.5"}
+org.clojure/math.numeric-tower {:mvn/version "0.1.0"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.0.5"]
+[org.clojure/math.numeric-tower "0.1.0"]
 ```
 
 [Maven](https://maven.apache.org/) dependency information:
@@ -55,7 +52,7 @@ org.clojure/math.numeric-tower {:mvn/version "0.0.5"}
 <dependency>
   <groupId>org.clojure</groupId>
   <artifactId>math.numeric-tower</artifactId>
-  <version>0.0.5</version>
+  <version>0.1.0</version>
 </dependency>
 ```
 
@@ -103,6 +100,9 @@ Developer Information
 
 Changelog
 ========================================
+
+* Release 0.1.0 on 2024-02-19
+  * Update parent pom
 
 * Release 0.0.5 on 2021-12-01
   * Exclude abs to avoid future warning in 1.11
