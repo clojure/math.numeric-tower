@@ -3,6 +3,7 @@
   <artifactId>math.numeric-tower</artifactId>
   <version>0.1.1-SNAPSHOT</version>
   <name>math.numeric-tower</name>
+  <description>Math functions that deal intelligently with the various types in Clojure's numeric tower.</description>
 
   <parent>
     <groupId>org.clojure</groupId>
