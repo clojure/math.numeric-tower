@@ -30,20 +30,20 @@ More documentation in docstrings.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.1.0
+Latest stable release: 0.1.1
 
 * [All Released Versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22math.numeric-tower%22)
 * [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~math.numeric-tower~~~)
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_edn) dependency information:
 ```clojure
-org.clojure/math.numeric-tower {:mvn/version "0.1.0"}
+org.clojure/math.numeric-tower {:mvn/version "0.1.1"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[org.clojure/math.numeric-tower "0.1.0"]
+[org.clojure/math.numeric-tower "0.1.1"]
 ```
 
 [Maven](https://maven.apache.org/) dependency information:
@@ -52,7 +52,7 @@ org.clojure/math.numeric-tower {:mvn/version "0.1.0"}
 <dependency>
   <groupId>org.clojure</groupId>
   <artifactId>math.numeric-tower</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
@@ -100,6 +100,9 @@ Developer Information
 
 Changelog
 ========================================
+
+* Release 0.1.1 on 2025-12-30
+  * Update parent pom
 
 * Release 0.1.0 on 2024-02-19
   * Update parent pom
